@@ -52,9 +52,9 @@ task.post('/', body_parser.json(), ({ body, session }, res) => {
 task.post('/list', body_parser.json(), ({ body, session }, res) => {
   const { user: { _id: user_id } } = session
   t_task.list({
-    ...body,
     user_id,
-    is_cleared: false
+    is_cleared: false,
+    ...body
   }).then(tasks => {
     res.json({
       success: true,
