@@ -1,5 +1,8 @@
 /** Database Infrastructure. (Based on mongodb) */
-const { MongoClient:db, ObjectID:OID } = require('mongodb')
+const {
+  MongoClient:db,
+  ObjectID:OID
+} = require('mongodb')
 
 let connect_promise = false
 
